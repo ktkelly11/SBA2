@@ -11,7 +11,7 @@ Languages used:
 - JavaScript
 - HTML
 
-And of course it is in a public repository on GitHub.
+It is in a public repository on GitHub.
 
 ## Development
 

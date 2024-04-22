@@ -77,7 +77,14 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
-  // here, we would process this data to achieve the desired result.
+  let course = CourseInfo.id;
+
+  function checkCourseID(CourseInfo, AssignmentGroup) {
+    if (CourseInfo.id !== AssignmentGroup.course_id) {
+      console.log(`You're in the wrong class`);
+    }
+  }
+
   const result = [
     {
       id: 125,
