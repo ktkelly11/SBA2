@@ -77,6 +77,8 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
+  let results = [];
+
   // try/catch to check course ID is correct (does not catch error...)
   try {
     if ((CourseInfo.id = AssignmentGroup.course_id)) {
@@ -95,16 +97,25 @@ function getLearnerData(course, ag, submissions) {
   //     }
   //   }
 
-  function getLearnerID(submissions) {
-    for (let i = 0; i < submissions.learner_id[i].length, i++; ) {
-      if (submissions.learner_id[i] == i) {
-        return submissions.learner_id[i];
-      } else {
-        return "Not a valid id";
-      }
-    }
-  }
+  // trying to declare variables
+  // for (let i = 0; i < submissions.length; i++) {
+  //   let id = submissions[i].learner_id;
+  //   learner.id = id;
+  // }
 
+  // function to get learner ID
+  // function getLearnerID(submissions) {
+  //   for (let i = 0; i < learner_id[i].length, i++; ) {
+  //     if (learner_id == i) {
+  //       return learner_id[i];
+  //     } else {
+  //       return "Not a valid id";
+  //     }
+  //   }
+  //   console.log(getLearnerID);
+  // }
+
+  // Another attempt to get learner ID
   // function getLearnerId(submissions) {
   //   for (let i = 0; i < submissions.learner_id[i].length; i++) {
   //     if (learner_id[i] == 0) {
@@ -128,7 +139,7 @@ function getLearnerData(course, ag, submissions) {
     },
   ];
 
-  return result;
+  return results;
 }
 
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
