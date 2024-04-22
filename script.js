@@ -81,13 +81,14 @@ function getLearnerData(course, ag, submissions) {
   try {
     if ((CourseInfo.id = AssignmentGroup.course_id)) {
       console.log("You are in the correct class!");
-    } else if (CourseInfo.id != AssignmentGroup.course_id) {
+    } else {
       throw "Error.  You are in the wrong course.";
     }
   } catch (err) {
     console.log(err);
   }
 
+  //   This was my attempt to check the course ID is correct - didn't work
   //   function checkCourseID(CourseInfo, AssignmentGroup) {
   //     if (CourseInfo.id !== AssignmentGroup.course_id) {
   //       console.log(`You're in the wrong class`);
