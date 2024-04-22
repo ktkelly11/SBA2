@@ -77,7 +77,7 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
-  // try/catch to check course ID is correct
+  // try/catch to check course ID is correct (does not catch error...)
   try {
     if ((CourseInfo.id = AssignmentGroup.course_id)) {
       console.log("You are in the correct class!");
