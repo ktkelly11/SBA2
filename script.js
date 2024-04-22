@@ -77,13 +77,22 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
-  let course = CourseInfo.id;
-
-  function checkCourseID(CourseInfo, AssignmentGroup) {
-    if (CourseInfo.id !== AssignmentGroup.course_id) {
-      console.log(`You're in the wrong class`);
+  // try/catch to check course ID is correct
+  try {
+    if ((CourseInfo.id = AssignmentGroup.course_id)) {
+      console.log("You are in the correct class!");
+    } else if (CourseInfo.id != AssignmentGroup.course_id) {
+      throw "Error.  You are in the wrong course.";
     }
+  } catch (err) {
+    console.log(err);
   }
+
+  //   function checkCourseID(CourseInfo, AssignmentGroup) {
+  //     if (CourseInfo.id !== AssignmentGroup.course_id) {
+  //       console.log(`You're in the wrong class`);
+  //     }
+  //   }
 
   const result = [
     {
