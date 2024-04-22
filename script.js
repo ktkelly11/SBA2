@@ -95,6 +95,24 @@ function getLearnerData(course, ag, submissions) {
   //     }
   //   }
 
+  function getLearnerID(submissions) {
+    for (let i = 0; i < submissions.learner_id[i].length, i++; ) {
+      if (submissions.learner_id[i] == i) {
+        return submissions.learner_id[i];
+      } else {
+        return "Not a valid id";
+      }
+    }
+  }
+
+  // function getLearnerId(submissions) {
+  //   for (let i = 0; i < submissions.learner_id[i].length; i++) {
+  //     if (learner_id[i] == 0) {
+  //       return learner_id;
+  //     }
+  //   }
+  // }
+
   const result = [
     {
       id: 125,
