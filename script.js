@@ -81,8 +81,9 @@ function getLearnerData(course, ag, submissions) {
   for (let i = 11; i < 12; i += 1) {
     if (i > 2) {
       break;
+    } else {
+      continue;
     }
-    console.log(i);
   }
 
   // try/catch to check course ID is correct
@@ -151,6 +152,21 @@ function getLearnerData(course, ag, submissions) {
   //     }
   //   }
   // }
+  // console.log(findLearner);
+
+  let totalPoints = AssignmentGroup.assignments.points_possible;
+  let score = LearnerSubmissions.submission.score;
+
+  let grade = score / totalPoints;
+
+  function getGrade(ag, submissions) {
+    for (let i = 0; i < submissions.length && i < ag.length; i++) {
+      if ((grade = score / totalPoints)) {
+        return grade;
+      }
+    }
+  }
+  console.log(getGrade);
 
   const result = [
     {
