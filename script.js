@@ -124,28 +124,33 @@ function getLearnerData(course, ag, submissions) {
   // }
 
   // attempting to figure out why my function is declared, but it's value is never read
-let id = LearnerSubmissions.assignment_id;
-let learner_id = id;
-  
-  function findLearner(submissions, id) {
-    for (let i = 0; i < submissions.length; i++) {
-      if (submissions.learner_id === id) {
-        return id;
-      } else {
-        return "Wrong student";
-      }
-    }
-    console.log(findLearner);
-  }
+  // let id = LearnerSubmissions.assignment_id;
+  // let learner_id = id;
 
-  let pointsTotal = AssignmentGroup.assignments.points_possible;
-  let score = LearnerSubmissions.submission.score;
+  //   function findLearner(submissions, id) {
+  //     for (let i = 0; i < submissions.length; i++) {
+  //       if (submissions.learner_id === id) {
+  //         return id;
+  //       } else {
+  //         return "Wrong student";
+  //       }
+  //     }
+  //     console.log(findLearner);
+  //   }
 
-  function getGrade(pointsTotal, score){
-    for (let i=0; i<points_possible; i++){
-      if()
-    }
-  }
+  // attempting to declare variables another way
+  // for (let i = 0; i < submissions.length; i++) {
+  //   let id = submissions[i].learner_id;
+  //   function findLearner(id) {
+  //     for (let j = 0; j < submissions.length; i++) {
+  //       if (id === submissions.learner_id) {
+  //         return id;
+  //       } else {
+  //         return "Wrong student";
+  //       }
+  //     }
+  //   }
+  // }
 
   const result = [
     {
