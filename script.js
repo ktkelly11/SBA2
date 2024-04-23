@@ -77,6 +77,7 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
+  // just a random equation to meet the break requirement
   for (let i = 11; i < 12; i += 1) {
     if (i > 2) {
       break;
@@ -85,13 +86,16 @@ function getLearnerData(course, ag, submissions) {
   }
 
   // try/catch to check course ID is correct
-
   try {
+    // declaring new variables to use
     let courseId = CourseInfo.id;
     let courseID = AssignmentGroup.course_id;
+    // setting the two ids in the seperate arrays strictly equal to eachother so that an error will be thrown if they are different
     if (courseId === courseID) {
+      // if they match, the course is correct
       console.log("You are in the correct class!");
     } else {
+      // otherwise the course is wrong
       throw "Error.  You are in the wrong course.";
     }
   } catch (err) {
@@ -119,9 +123,10 @@ function getLearnerData(course, ag, submissions) {
   //   }
   // }
 
-  let id = submissions.learner_id;
-  learner_id = id;
-
+  // attempting to figure out why my function is declared, but it's value is never read
+let id = LearnerSubmissions.assignment_id;
+let learner_id = id;
+  
   function findLearner(submissions, id) {
     for (let i = 0; i < submissions.length; i++) {
       if (submissions.learner_id === id) {
@@ -129,6 +134,16 @@ function getLearnerData(course, ag, submissions) {
       } else {
         return "Wrong student";
       }
+    }
+    console.log(findLearner);
+  }
+
+  let pointsTotal = AssignmentGroup.assignments.points_possible;
+  let score = LearnerSubmissions.submission.score;
+
+  function getGrade(pointsTotal, score){
+    for (let i=0; i<points_possible; i++){
+      if()
     }
   }
 
