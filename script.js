@@ -77,11 +77,19 @@ const LearnerSubmissions = [
 ];
 
 function getLearnerData(course, ag, submissions) {
-  let results = [];
+  for (let i = 11; i < 12; i += 1) {
+    if (i > 2) {
+      break;
+    }
+    console.log(i);
+  }
 
-  // try/catch to check course ID is correct (does not catch error...)
+  // try/catch to check course ID is correct
+
   try {
-    if ((CourseInfo.id = AssignmentGroup.course_id)) {
+    let courseId = CourseInfo.id;
+    let courseID = AssignmentGroup.course_id;
+    if (courseId === courseID) {
       console.log("You are in the correct class!");
     } else {
       throw "Error.  You are in the wrong course.";
@@ -89,7 +97,6 @@ function getLearnerData(course, ag, submissions) {
   } catch (err) {
     console.log(err);
   }
-
   //   This was my attempt to check the course ID is correct - didn't work
   //   function checkCourseID(CourseInfo, AssignmentGroup) {
   //     if (CourseInfo.id !== AssignmentGroup.course_id) {
@@ -124,6 +131,16 @@ function getLearnerData(course, ag, submissions) {
   //   }
   // }
 
+  let id = submissions.learner_id;
+  learner_id = id;
+
+  function getLearnerId(submissions, id) {
+    for (let i = 0; i < submissions.learner_id.length; i++) {
+      if (submissions[i].id == id)
+    }
+  return id
+  }
+
   const result = [
     {
       id: 125,
@@ -139,7 +156,7 @@ function getLearnerData(course, ag, submissions) {
     },
   ];
 
-  return results;
+  return result;
 }
 
 const result = getLearnerData(CourseInfo, AssignmentGroup, LearnerSubmissions);
