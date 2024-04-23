@@ -154,19 +154,20 @@ function getLearnerData(course, ag, submissions) {
   // }
   // console.log(findLearner);
 
-  let totalPoints = AssignmentGroup.assignments.points_possible;
-  let score = LearnerSubmissions.submission.score;
+  // attempt to find grade
+  // let totalPoints = AssignmentGroup.assignments.points_possible;
+  // let score = LearnerSubmissions.submission.score;
 
-  let grade = score / totalPoints;
+  // let grade = score / totalPoints;
 
-  function getGrade(ag, submissions) {
-    for (let i = 0; i < submissions.length && i < ag.length; i++) {
-      if ((grade = score / totalPoints)) {
-        return grade;
-      }
-    }
-  }
-  console.log(getGrade);
+  // function getGrade(ag, submissions) {
+  //   for (let i = 0; i < submissions.length && i < ag.length; i++) {
+  //     if ((grade = score / totalPoints)) {
+  //       return grade;
+  //     }
+  //   }
+  // }
+  // console.log(getGrade);
 
   const result = [
     {
