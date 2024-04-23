@@ -176,9 +176,6 @@ function getLearnerData(course, ag, submissions) {
     learner.id = id;
   }
 
-  // const learner1251 = LearnerSubmissions[0].learner_id;
-  // console.log(learner1251);
-
   const result = [
     {
       id: 125,
