@@ -80,9 +80,9 @@ function getLearnerData(course, ag, submissions) {
   // just a random equation to meet the break requirement
   for (let i = 11; i < 12; i += 1) {
     if (i > 2) {
-      break;
-    } else {
       continue;
+    } else {
+      break;
     }
   }
 
@@ -127,7 +127,6 @@ function getLearnerData(course, ag, submissions) {
   // attempting to figure out why my function is declared, but it's value is never read
   // let id = LearnerSubmissions.assignment_id;
   // let learner_id = id;
-
   //   function findLearner(submissions, id) {
   //     for (let i = 0; i < submissions.length; i++) {
   //       if (submissions.learner_id === id) {
@@ -138,8 +137,9 @@ function getLearnerData(course, ag, submissions) {
   //     }
   //     console.log(findLearner);
   //   }
+  // console.log(findLearner);
 
-  // attempting to declare variables another way
+  // attempting to declare variables another way - inside a for statement (function still did not work)
   // for (let i = 0; i < submissions.length; i++) {
   //   let id = submissions[i].learner_id;
   //   function findLearner(id) {
@@ -154,12 +154,12 @@ function getLearnerData(course, ag, submissions) {
   // }
   // console.log(findLearner);
 
-  // attempt to find grade
+  // attempt to find grade - my functions are not working the way I want them to...
+  // declared variables
   // let totalPoints = AssignmentGroup.assignments.points_possible;
   // let score = LearnerSubmissions.submission.score;
-
   // let grade = score / totalPoints;
-
+  // attempted to create a function to find the grade
   // function getGrade(ag, submissions) {
   //   for (let i = 0; i < submissions.length && i < ag.length; i++) {
   //     if ((grade = score / totalPoints)) {
@@ -168,6 +168,13 @@ function getLearnerData(course, ag, submissions) {
   //   }
   // }
   // console.log(getGrade);
+
+  for (let i = 0; i < submissions.length; i++) {
+    let id = submissions[i].learner_id;
+
+    let learner = {};
+    learner.id = id;
+  }
 
   const result = [
     {
