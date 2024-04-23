@@ -2,7 +2,7 @@
 
 ## A bit about the SBA
 
-Fill this in when I am done with the programming
+I attempted to itierate through the data and compare ids and find averages and test scores. I am struggling with this Assesment a lot. I find I understand the basics of JavaScript, but not necessarily how to put them into practice.
 
 ## Tech
 

@@ -97,18 +97,6 @@ function getLearnerData(course, ag, submissions) {
   } catch (err) {
     console.log(err);
   }
-  //   This was my attempt to check the course ID is correct - didn't work
-  //   function checkCourseID(CourseInfo, AssignmentGroup) {
-  //     if (CourseInfo.id !== AssignmentGroup.course_id) {
-  //       console.log(`You're in the wrong class`);
-  //     }
-  //   }
-
-  // trying to declare variables
-  // for (let i = 0; i < submissions.length; i++) {
-  //   let id = submissions[i].learner_id;
-  //   learner.id = id;
-  // }
 
   // function to get learner ID
   // function getLearnerID(submissions) {
@@ -134,11 +122,14 @@ function getLearnerData(course, ag, submissions) {
   let id = submissions.learner_id;
   learner_id = id;
 
-  function getLearnerId(submissions, id) {
-    for (let i = 0; i < submissions.learner_id.length; i++) {
-      if (submissions[i].id == id)
+  function findLearner(submissions, id) {
+    for (let i = 0; i < submissions.length; i++) {
+      if (submissions.learner_id === id) {
+        return id;
+      } else {
+        return "Wrong student";
+      }
     }
-  return id
   }
 
   const result = [
